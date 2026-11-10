@@ -1,0 +1,22 @@
+{
+  "name": "dsh-classic-agent-button",
+  "version": "0.1.1",
+  "description": "DSH 桌面版顶部经典 Agent 模式快捷按钮",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/zxw219/dsh-classic-agent-button.git" },
+  "homepage": "https://github.com/zxw219/dsh-classic-agent-button#readme",
+  "bugs": { "url": "https://github.com/zxw219/dsh-classic-agent-button/issues" },
+  "exports": { ".": "./index.js", "./client": "./client.js" },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "scripts": { "check": "node --check client.js && node --check index.js" },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-slots"]
+    }
+  }
+}

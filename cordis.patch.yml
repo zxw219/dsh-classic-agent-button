@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-classic-agent-button
+      name: dsh-classic-agent-button
+      config: {}
